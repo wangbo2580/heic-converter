@@ -34,7 +34,7 @@ export function Footer({ variant = 'full' }: FooterProps) {
               {t.common.terms}
             </Link>
             {variant === 'full' && (
-              <a href="mailto:contact@example.com" className="text-gray-500 hover:text-gray-700 transition-colors">
+              <a href="mailto:wbo861496@gmail.com" className="text-gray-500 hover:text-gray-700 transition-colors">
                 {t.common.contact}
               </a>
             )}

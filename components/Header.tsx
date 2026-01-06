@@ -30,8 +30,18 @@ export function Header({ variant = 'full', theme = 'blue' }: HeaderProps) {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <div className={`w-9 h-9 bg-gradient-to-br ${gradientClass} rounded-lg flex items-center justify-center`}>
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none">
+                {/* 左侧图片图标 */}
+                <rect x="2" y="4" width="9" height="9" rx="1.5" stroke="currentColor" strokeWidth="1.8" fill="none" />
+                <circle cx="5" cy="7" r="1" fill="currentColor" />
+                <path d="M2 11l2.5-2.5a1 1 0 011.4 0L9 11.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                {/* 转换箭头 */}
+                <path d="M12 8h4m0 0l-2-2m2 2l-2 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M12 16h4m0 0l-2-2m2 2l-2 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.6" />
+                {/* 右侧图片图标 */}
+                <rect x="13" y="11" width="9" height="9" rx="1.5" stroke="currentColor" strokeWidth="1.8" fill="none" />
+                <circle cx="16" cy="14" r="1" fill="currentColor" />
+                <path d="M13 18l2.5-2.5a1 1 0 011.4 0L20 18.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
               </svg>
             </div>
             <span className="text-lg font-bold text-gray-900">{siteName}</span>

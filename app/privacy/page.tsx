@@ -132,7 +132,7 @@ export default function PrivacyPage() {
               {t.privacy.contactContent}
             </p>
             <p className="text-gray-600 mt-2">
-              Email: <a href="mailto:privacy@example.com" className="text-blue-600 hover:underline">privacy@example.com</a>
+              Email: <a href="mailto:wbo861496@gmail.com" className="text-blue-600 hover:underline">wbo861496@gmail.com</a>
             </p>
           </section>
         </div>
