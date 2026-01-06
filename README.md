@@ -1,6 +1,7 @@
 # HEIC/AVIF Converter
 
 免费在线 HEIC/AVIF 批量转换器 - 将 iPhone 照片和新格式图片转换为 JPG/PNG/WebP
+
 ## 功能特点
 
 - **批量转换**: 支持一次转换最多 100 张图片
