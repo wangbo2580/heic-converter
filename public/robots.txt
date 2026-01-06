@@ -1,0 +1,10 @@
+# robots.txt for HEIC/AVIF Converter
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://your-domain.com/sitemap.xml
+
+# Disallow admin/api paths
+Disallow: /api/
