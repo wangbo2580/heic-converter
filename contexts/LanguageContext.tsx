@@ -24,13 +24,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     const savedLocale = localStorage.getItem(STORAGE_KEY) as Locale | null;
     if (savedLocale && translations[savedLocale]) {
       setLocaleState(savedLocale);
-    } else {
-      // Try to detect browser language
-      const browserLang = navigator.language.toLowerCase();
-      if (browserLang.startsWith('zh')) {
-        setLocaleState('zh');
-      }
     }
+    // Default to English (defaultLocale) if no saved preference
     setMounted(true);
   }, []);
 
