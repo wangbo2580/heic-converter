@@ -50,6 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="google-site-verification" content="MTVFQzPMMpzXY9iM1OgSGWSFMd3zvkMRn_fGoFmElNQ" />
         <meta name="theme-color" content="#2563eb" />
       </head>
       <body className={inter.className}>
