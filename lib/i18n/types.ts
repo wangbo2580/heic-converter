@@ -38,8 +38,10 @@ export interface Translations {
     tools: string;
     heicToJpg: string;
     heicToPng: string;
+    heicToWebp: string;
     avifToJpg: string;
     avifToPng: string;
+    avifToWebp: string;
   };
 
   // Home page
@@ -211,8 +213,10 @@ export interface Translations {
   converterPages: {
     heicToJpg: ConverterPageTranslations;
     heicToPng: ConverterPageTranslations;
+    heicToWebp: ConverterPageTranslations;
     avifToJpg: ConverterPageTranslations;
     avifToPng: ConverterPageTranslations;
+    avifToWebp: ConverterPageTranslations;
   };
 
   // Terms of Service

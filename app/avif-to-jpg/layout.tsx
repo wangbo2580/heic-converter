@@ -3,12 +3,12 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AVIF to JPG Converter - Free Online Tool | Convert AVIF Images',
-  description: 'Free online AVIF to JPG converter. Convert AVIF images to JPG format for universal compatibility. Batch conversion supported, no registration required.',
-  keywords: 'avif to jpg, avif to jpg converter, convert avif to jpg, avif to jpg online, avif converter, avif to jpeg',
+  title: 'AVIF to JPG Converter Free Online - Fast AVIF Image Conversion',
+  description: 'Free AVIF to JPG converter. Convert AVIF images to JPG format instantly for universal compatibility. Batch conversion up to 100 files, preserve image quality. No registration required.',
+  keywords: 'avif to jpg, avif to jpg converter, convert avif to jpg, avif to jpg online free, avif converter, avif to jpeg, batch avif converter, avif to jpg free',
   openGraph: {
-    title: 'AVIF to JPG Converter - Free Online Tool',
-    description: 'Convert AVIF images to JPG format for universal compatibility. Fast and free.',
+    title: 'AVIF to JPG Converter Free Online - Fast Conversion',
+    description: 'Free AVIF to JPG converter. Convert AVIF images instantly. Batch process up to 100 files.',
     type: 'website',
     locale: 'en_US',
     alternateLocale: ['zh_CN'],

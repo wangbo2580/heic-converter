@@ -41,8 +41,10 @@ export function Header({ variant = 'full', theme = 'blue' }: HeaderProps) {
   const tools = [
     { href: '/heic-to-jpg', label: t.header.heicToJpg },
     { href: '/heic-to-png', label: t.header.heicToPng },
+    { href: '/heic-to-webp', label: t.header.heicToWebp },
     { href: '/avif-to-jpg', label: t.header.avifToJpg },
     { href: '/avif-to-png', label: t.header.avifToPng },
+    { href: '/avif-to-webp', label: t.header.avifToWebp },
   ];
 
   return (

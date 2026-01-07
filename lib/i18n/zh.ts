@@ -20,8 +20,10 @@ export const zh: Translations = {
     tools: '转换工具',
     heicToJpg: 'HEIC 转 JPG',
     heicToPng: 'HEIC 转 PNG',
+    heicToWebp: 'HEIC 转 WebP',
     avifToJpg: 'AVIF 转 JPG',
     avifToPng: 'AVIF 转 PNG',
+    avifToWebp: 'AVIF 转 WebP',
   },
 
   home: {
@@ -182,6 +184,34 @@ export const zh: Translations = {
         ],
       },
     },
+    heicToWebp: {
+      title: '免费在线 HEIC 转 WebP 转换器',
+      subtitle: '将 iPhone HEIC 照片转换为 WebP 格式，获得更小的文件体积和更好的网页性能。批量转换，保留质量。',
+      metaTitle: 'HEIC 转 WebP 转换器 - 免费在线工具 | 现代格式',
+      metaDescription: '免费在线 HEIC 转 WebP 转换器。将 iPhone HEIC 照片转换为 WebP，获得更小文件和更好网页性能。支持批量转换，无需注册。',
+      metaKeywords: 'heic转webp, heic转webp转换器, heic转换webp, heic在线转webp, iphone照片转webp, heic webp转换器',
+      faq: {
+        title: 'HEIC 转 WebP 常见问题',
+        items: [
+          {
+            question: '为什么要将 HEIC 转换为 WebP？',
+            answer: 'WebP 是 Google 开发的现代图像格式，提供卓越的压缩效果。WebP 文件通常比同等质量的 JPG 小 25-35%，非常适合对加载速度有要求的网站和网络应用。',
+          },
+          {
+            question: 'WebP 格式支持广泛吗？',
+            answer: '是的，WebP 现在被所有主流浏览器支持，包括 Chrome、Firefox、Safari 和 Edge。由于其出色的压缩和质量平衡，它已成为网络图片的标准格式。',
+          },
+          {
+            question: 'WebP 相比 JPG 有什么优势？',
+            answer: 'WebP 提供更好的压缩（文件小 25-35%），支持有损和无损压缩，支持透明度（像 PNG），还支持动画（像 GIF）。是网页优化的最佳选择。',
+          },
+          {
+            question: '将 HEIC 转换为 WebP 会降低质量吗？',
+            answer: '我们默认使用 92% 的高质量设置，质量损失极小，几乎无法察觉。实际上，在相同文件大小下，WebP 比 JPG 保留的质量更好。',
+          },
+        ],
+      },
+    },
     avifToJpg: {
       title: '免费在线 AVIF 转 JPG 转换器',
       subtitle: '将 AVIF 图片转换为 JPG 格式以获得通用兼容性。快速、免费、无限批量转换。',
@@ -234,6 +264,34 @@ export const zh: Translations = {
           {
             question: '可以批量转换多个 AVIF 文件吗？',
             answer: '是的，您可以一次转换多达 100 个 AVIF 文件。只需选择或拖动多个文件即可开始批量转换。',
+          },
+        ],
+      },
+    },
+    avifToWebp: {
+      title: '免费在线 AVIF 转 WebP 转换器',
+      subtitle: '将 AVIF 图片转换为 WebP 格式，获得更广泛的浏览器兼容性。快速转换，保留质量，无限批量处理。',
+      metaTitle: 'AVIF 转 WebP 转换器 - 免费在线工具 | 现代格式',
+      metaDescription: '免费在线 AVIF 转 WebP 转换器。将 AVIF 图片转换为 WebP 以获得更好的浏览器兼容性。支持批量转换，无需注册。',
+      metaKeywords: 'avif转webp, avif转webp转换器, avif转换webp, avif在线转webp, avif转换器, avif webp',
+      faq: {
+        title: 'AVIF 转 WebP 常见问题',
+        items: [
+          {
+            question: '为什么要将 AVIF 转换为 WebP？',
+            answer: '虽然 AVIF 提供更好的压缩效果，但 WebP 拥有更广泛的浏览器支持和更好的通用兼容性。转换为 WebP 可确保您的图片在所有主流浏览器和平台上正常工作。',
+          },
+          {
+            question: 'AVIF 和 WebP 哪个格式更好？',
+            answer: 'AVIF 通常比 WebP 提供 20-30% 更好的压缩效果，但 WebP 拥有更广泛的浏览器支持。选择 AVIF 以获得最大压缩，选择 WebP 以获得最大兼容性。',
+          },
+          {
+            question: '将 AVIF 转换为 WebP 会损失质量吗？',
+            answer: '两者都是具有出色压缩效果的现代格式。我们使用 92% 的高质量设置来最小化任何可见差异。转换过程能很好地保留图像质量。',
+          },
+          {
+            question: 'WebP 像 AVIF 一样支持透明度吗？',
+            answer: '是的，AVIF 和 WebP 都支持透明度（Alpha 通道）。转换为 WebP 时，AVIF 图片中的任何透明度都将被保留。',
           },
         ],
       },

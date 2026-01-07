@@ -3,12 +3,12 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'HEIC to JPG Converter - Free Online Tool | Convert iPhone Photos',
-  description: 'Free online HEIC to JPG converter. Convert iPhone photos from HEIC to JPG format instantly. Batch conversion supported, no registration required, preserve original quality.',
-  keywords: 'heic to jpg, heic to jpg converter, convert heic to jpg, heic to jpg online, iphone photo to jpg, heic converter',
+  title: 'HEIC to JPG Converter Free Online - Convert iPhone Photos Instantly',
+  description: 'Free HEIC to JPG converter. Convert iPhone HEIC photos to JPG in seconds. Batch conversion up to 100 files, preserve quality & EXIF metadata. No installation, works on Windows & Mac.',
+  keywords: 'heic to jpg, heic to jpg converter, convert heic to jpg, heic to jpg online free, iphone photo to jpg, heic converter, batch heic to jpg, heic to jpg windows',
   openGraph: {
-    title: 'HEIC to JPG Converter - Free Online Tool',
-    description: 'Convert iPhone HEIC photos to JPG format instantly. Free, unlimited batch conversion.',
+    title: 'HEIC to JPG Converter Free Online - Convert iPhone Photos',
+    description: 'Free HEIC to JPG converter. Batch convert up to 100 iPhone photos instantly. Preserve quality & EXIF data.',
     type: 'website',
     locale: 'en_US',
     alternateLocale: ['zh_CN'],

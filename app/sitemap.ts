@@ -32,6 +32,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/heic-to-webp`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/avif-to-jpg`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
@@ -39,6 +45,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/avif-to-png`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/avif-to-webp`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,

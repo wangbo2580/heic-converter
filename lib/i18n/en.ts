@@ -20,8 +20,10 @@ export const en: Translations = {
     tools: 'Tools',
     heicToJpg: 'HEIC to JPG',
     heicToPng: 'HEIC to PNG',
+    heicToWebp: 'HEIC to WebP',
     avifToJpg: 'AVIF to JPG',
     avifToPng: 'AVIF to PNG',
+    avifToWebp: 'AVIF to WebP',
   },
 
   home: {
@@ -182,6 +184,34 @@ export const en: Translations = {
         ],
       },
     },
+    heicToWebp: {
+      title: 'Free HEIC to WebP Converter Online',
+      subtitle: 'Convert iPhone HEIC photos to WebP format for smaller file sizes and better web performance. Batch conversion with quality preserved.',
+      metaTitle: 'HEIC to WebP Converter - Free Online Tool | Modern Format',
+      metaDescription: 'Free online HEIC to WebP converter. Convert iPhone HEIC photos to WebP for smaller files and better web performance. Batch conversion, no registration required.',
+      metaKeywords: 'heic to webp, heic to webp converter, convert heic to webp, heic to webp online, iphone photo to webp, heic webp converter',
+      faq: {
+        title: 'HEIC to WebP Conversion FAQ',
+        items: [
+          {
+            question: 'Why convert HEIC to WebP?',
+            answer: 'WebP is a modern image format developed by Google that provides superior compression. WebP files are typically 25-35% smaller than JPG at the same quality, making them ideal for websites and web applications where loading speed matters.',
+          },
+          {
+            question: 'Is WebP widely supported?',
+            answer: 'Yes, WebP is now supported by all major browsers including Chrome, Firefox, Safari, and Edge. It has become the standard format for web images due to its excellent compression and quality balance.',
+          },
+          {
+            question: 'What are the advantages of WebP over JPG?',
+            answer: 'WebP offers better compression (25-35% smaller files), supports both lossy and lossless compression, transparency (like PNG), and animation (like GIF). It is the best choice for web optimization.',
+          },
+          {
+            question: 'Will converting HEIC to WebP reduce quality?',
+            answer: 'We use high quality settings (92%) by default, so quality loss is minimal and virtually unnoticeable. WebP actually preserves quality better than JPG at the same file size.',
+          },
+        ],
+      },
+    },
     avifToJpg: {
       title: 'Free AVIF to JPG Converter Online',
       subtitle: 'Convert AVIF images to JPG format for universal compatibility. Fast, free, and unlimited batch conversion.',
@@ -234,6 +264,34 @@ export const en: Translations = {
           {
             question: 'Can I batch convert multiple AVIF files?',
             answer: 'Yes, you can convert up to 100 AVIF files at once. Simply select or drag multiple files to start batch conversion.',
+          },
+        ],
+      },
+    },
+    avifToWebp: {
+      title: 'Free AVIF to WebP Converter Online',
+      subtitle: 'Convert AVIF images to WebP format for wider browser compatibility. Fast conversion with quality preserved, unlimited batch processing.',
+      metaTitle: 'AVIF to WebP Converter - Free Online Tool | Modern Format',
+      metaDescription: 'Free online AVIF to WebP converter. Convert AVIF images to WebP for better browser compatibility. Batch conversion, no registration required.',
+      metaKeywords: 'avif to webp, avif to webp converter, convert avif to webp, avif to webp online, avif converter, avif webp',
+      faq: {
+        title: 'AVIF to WebP Conversion FAQ',
+        items: [
+          {
+            question: 'Why convert AVIF to WebP?',
+            answer: 'While AVIF offers superior compression, WebP has wider browser support and is more universally compatible. Converting to WebP ensures your images work across all major browsers and platforms.',
+          },
+          {
+            question: 'Which format is better: AVIF or WebP?',
+            answer: 'AVIF generally offers 20-30% better compression than WebP, but WebP has broader browser support. Choose AVIF for maximum compression, WebP for maximum compatibility.',
+          },
+          {
+            question: 'Will quality be lost when converting AVIF to WebP?',
+            answer: 'Both are modern formats with excellent compression. We use high quality settings (92%) to minimize any visible difference. The conversion preserves image quality well.',
+          },
+          {
+            question: 'Does WebP support transparency like AVIF?',
+            answer: 'Yes, both AVIF and WebP support transparency (alpha channel). Any transparency in your AVIF images will be preserved when converting to WebP.',
           },
         ],
       },
