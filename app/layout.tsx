@@ -9,7 +9,7 @@ import { GoogleAnalytics } from '@/components';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://heicconverter.tools'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.avif-heicconverter.info'),
   title: 'Free Online HEIC/AVIF Converter - Batch Convert to JPG/PNG',
   description: 'Free online tool to convert HEIC and AVIF images to JPG, PNG, or WebP. Batch conversion supported, no limits, preserve EXIF metadata. No registration required.',
   keywords: 'heic to jpg, avif to jpg, heic converter, avif converter, batch convert heic, free heic converter, convert heic to jpg online, heic to png',
