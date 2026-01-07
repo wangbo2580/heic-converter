@@ -2,6 +2,7 @@
 
 'use client';
 
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { useTranslations } from '@/contexts/LanguageContext';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -13,6 +14,8 @@ interface HeaderProps {
 
 export function Header({ variant = 'full', theme = 'blue' }: HeaderProps) {
   const t = useTranslations();
+  const [isToolsOpen, setIsToolsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const gradientClass = theme === 'purple'
     ? 'from-purple-500 to-purple-600'
@@ -23,6 +26,24 @@ export function Header({ variant = 'full', theme = 'blue' }: HeaderProps) {
     : 'hover:text-blue-600';
 
   const siteName = theme === 'purple' ? 'AVIF Converter' : t.common.siteName;
+
+  // 点击外部关闭下拉菜单
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsToolsOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const tools = [
+    { href: '/heic-to-jpg', label: t.header.heicToJpg },
+    { href: '/heic-to-png', label: t.header.heicToPng },
+    { href: '/avif-to-jpg', label: t.header.avifToJpg },
+    { href: '/avif-to-png', label: t.header.avifToPng },
+  ];
 
   return (
     <header className="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
@@ -50,15 +71,39 @@ export function Header({ variant = 'full', theme = 'blue' }: HeaderProps) {
           <div className="flex items-center gap-4">
             {variant === 'full' && (
               <nav className="hidden sm:flex items-center gap-6">
-                {theme === 'purple' ? (
-                  <Link href="/" className={`text-sm text-gray-600 ${hoverClass} transition-colors font-medium`}>
-                    {t.header.heicConvert}
-                  </Link>
-                ) : (
-                  <Link href="/avif" className={`text-sm text-gray-600 ${hoverClass} transition-colors font-medium`}>
-                    {t.header.avifConvert}
-                  </Link>
-                )}
+                {/* 工具下拉菜单 */}
+                <div className="relative" ref={dropdownRef}>
+                  <button
+                    onClick={() => setIsToolsOpen(!isToolsOpen)}
+                    className={`text-sm text-gray-600 ${hoverClass} transition-colors font-medium flex items-center gap-1`}
+                  >
+                    {t.header.tools}
+                    <svg
+                      className={`w-4 h-4 transition-transform ${isToolsOpen ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+
+                  {isToolsOpen && (
+                    <div className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 rounded-xl shadow-lg py-2 z-50">
+                      {tools.map((tool) => (
+                        <Link
+                          key={tool.href}
+                          href={tool.href}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+                          onClick={() => setIsToolsOpen(false)}
+                        >
+                          {tool.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
                 <a href="#faq" className={`text-sm text-gray-600 ${hoverClass} transition-colors font-medium`}>
                   {t.common.faq}
                 </a>

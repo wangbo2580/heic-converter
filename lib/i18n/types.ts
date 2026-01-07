@@ -2,6 +2,22 @@
 
 export type Locale = 'en' | 'zh';
 
+// Converter page translations structure
+export interface ConverterPageTranslations {
+  title: string;
+  subtitle: string;
+  metaTitle: string;
+  metaDescription: string;
+  metaKeywords: string;
+  faq: {
+    title: string;
+    items: {
+      question: string;
+      answer: string;
+    }[];
+  };
+}
+
 export interface Translations {
   // Common
   common: {
@@ -19,6 +35,11 @@ export interface Translations {
   header: {
     heicConvert: string;
     avifConvert: string;
+    tools: string;
+    heicToJpg: string;
+    heicToPng: string;
+    avifToJpg: string;
+    avifToPng: string;
   };
 
   // Home page
@@ -176,6 +197,14 @@ export interface Translations {
     };
     contactTitle: string;
     contactContent: string;
+  };
+
+  // Converter landing pages
+  converterPages: {
+    heicToJpg: ConverterPageTranslations;
+    heicToPng: ConverterPageTranslations;
+    avifToJpg: ConverterPageTranslations;
+    avifToPng: ConverterPageTranslations;
   };
 
   // Terms of Service

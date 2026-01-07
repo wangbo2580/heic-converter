@@ -17,6 +17,11 @@ export const en: Translations = {
   header: {
     heicConvert: 'HEIC Convert',
     avifConvert: 'AVIF Convert',
+    tools: 'Tools',
+    heicToJpg: 'HEIC to JPG',
+    heicToPng: 'HEIC to PNG',
+    avifToJpg: 'AVIF to JPG',
+    avifToPng: 'AVIF to PNG',
   },
 
   home: {
@@ -110,6 +115,122 @@ export const en: Translations = {
     title: 'Page Not Found',
     message: 'Sorry, the page you are looking for does not exist or has been removed. Please return to the homepage to continue using our image conversion service.',
     backHome: 'Back to Home',
+  },
+
+  // Converter landing pages
+  converterPages: {
+    heicToJpg: {
+      title: 'Free HEIC to JPG Converter Online',
+      subtitle: 'Convert iPhone HEIC photos to JPG format instantly. Free, unlimited batch conversion with original quality preserved.',
+      metaTitle: 'HEIC to JPG Converter - Free Online Tool | Convert iPhone Photos',
+      metaDescription: 'Free online HEIC to JPG converter. Convert iPhone photos from HEIC to JPG format instantly. Batch conversion supported, no registration required, preserve original quality.',
+      metaKeywords: 'heic to jpg, heic to jpg converter, convert heic to jpg, heic to jpg online, iphone photo to jpg, heic converter',
+      faq: {
+        title: 'HEIC to JPG Conversion FAQ',
+        items: [
+          {
+            question: 'Why convert HEIC to JPG?',
+            answer: 'HEIC is Apple\'s default photo format since iOS 11. While it offers better compression, JPG has universal compatibility across all devices, operating systems, and applications. Converting to JPG ensures your photos can be viewed and shared anywhere.',
+          },
+          {
+            question: 'Will I lose quality when converting HEIC to JPG?',
+            answer: 'We use 92% quality setting by default, which preserves excellent image quality while keeping file sizes reasonable. The quality loss is virtually imperceptible to the human eye.',
+          },
+          {
+            question: 'How many HEIC files can I convert at once?',
+            answer: 'You can convert up to 100 HEIC files at once, with each file up to 50MB. Our batch conversion feature makes it easy to convert multiple photos quickly.',
+          },
+          {
+            question: 'Is my data safe during conversion?',
+            answer: 'Yes, your files are processed securely and deleted immediately after conversion. We never store your photos on our servers.',
+          },
+        ],
+      },
+    },
+    heicToPng: {
+      title: 'Free HEIC to PNG Converter Online',
+      subtitle: 'Convert iPhone HEIC photos to PNG format with transparency support. Lossless quality, unlimited batch conversion.',
+      metaTitle: 'HEIC to PNG Converter - Free Online Tool | Lossless Conversion',
+      metaDescription: 'Free online HEIC to PNG converter. Convert iPhone HEIC photos to PNG format with lossless quality and transparency support. Batch conversion, no registration required.',
+      metaKeywords: 'heic to png, heic to png converter, convert heic to png, heic to png online, iphone photo to png, heic png converter',
+      faq: {
+        title: 'HEIC to PNG Conversion FAQ',
+        items: [
+          {
+            question: 'Why convert HEIC to PNG instead of JPG?',
+            answer: 'PNG is a lossless format that preserves 100% of the original image quality. It also supports transparency, making it ideal for graphics, logos, or images that need editing. Choose PNG when quality is more important than file size.',
+          },
+          {
+            question: 'Is PNG conversion truly lossless?',
+            answer: 'Yes, PNG uses lossless compression, meaning no image data is lost during conversion. The converted PNG will have the same quality as the original HEIC file.',
+          },
+          {
+            question: 'Why are PNG files larger than JPG?',
+            answer: 'PNG uses lossless compression which preserves all image data, resulting in larger files. JPG uses lossy compression, sacrificing some quality for smaller file sizes. Choose based on your needs.',
+          },
+          {
+            question: 'Can I convert HEIC with transparency to PNG?',
+            answer: 'Yes, if your HEIC file contains transparency information, it will be preserved when converting to PNG format.',
+          },
+        ],
+      },
+    },
+    avifToJpg: {
+      title: 'Free AVIF to JPG Converter Online',
+      subtitle: 'Convert AVIF images to JPG format for universal compatibility. Fast, free, and unlimited batch conversion.',
+      metaTitle: 'AVIF to JPG Converter - Free Online Tool | Convert AVIF Images',
+      metaDescription: 'Free online AVIF to JPG converter. Convert AVIF images to JPG format for universal compatibility. Batch conversion supported, no registration required.',
+      metaKeywords: 'avif to jpg, avif to jpg converter, convert avif to jpg, avif to jpg online, avif converter, avif to jpeg',
+      faq: {
+        title: 'AVIF to JPG Conversion FAQ',
+        items: [
+          {
+            question: 'What is AVIF format?',
+            answer: 'AVIF (AV1 Image File Format) is a modern image format based on AV1 video codec. It offers superior compression compared to JPG and WebP, but may not be supported by older browsers and software.',
+          },
+          {
+            question: 'Why convert AVIF to JPG?',
+            answer: 'While AVIF offers excellent compression, JPG has near-universal support across all devices and software. Converting to JPG ensures your images can be viewed anywhere.',
+          },
+          {
+            question: 'Will quality be lost when converting AVIF to JPG?',
+            answer: 'Some quality loss may occur since JPG uses lossy compression. We use high quality settings (92%) to minimize any visible difference.',
+          },
+          {
+            question: 'How fast is the conversion?',
+            answer: 'Most conversions complete within seconds. Processing time depends on file size and number of images, but our optimized converter handles files quickly.',
+          },
+        ],
+      },
+    },
+    avifToPng: {
+      title: 'Free AVIF to PNG Converter Online',
+      subtitle: 'Convert AVIF images to PNG format with lossless quality. Preserve transparency, unlimited batch conversion.',
+      metaTitle: 'AVIF to PNG Converter - Free Online Tool | Lossless Quality',
+      metaDescription: 'Free online AVIF to PNG converter. Convert AVIF images to PNG format with lossless quality and transparency preservation. Batch conversion, no registration required.',
+      metaKeywords: 'avif to png, avif to png converter, convert avif to png, avif to png online, avif converter, avif png',
+      faq: {
+        title: 'AVIF to PNG Conversion FAQ',
+        items: [
+          {
+            question: 'Why convert AVIF to PNG?',
+            answer: 'PNG offers lossless compression and universal compatibility. Converting AVIF to PNG preserves maximum image quality and any transparency, making it ideal for editing or archiving.',
+          },
+          {
+            question: 'Will transparency be preserved?',
+            answer: 'Yes, both AVIF and PNG support transparency (alpha channel). Any transparency in the original AVIF will be preserved in the PNG output.',
+          },
+          {
+            question: 'Why choose PNG over JPG for AVIF conversion?',
+            answer: 'Choose PNG when you need lossless quality, transparency support, or plan to edit the image further. Choose JPG when you need smaller file sizes and universal compatibility.',
+          },
+          {
+            question: 'Can I batch convert multiple AVIF files?',
+            answer: 'Yes, you can convert up to 100 AVIF files at once. Simply select or drag multiple files to start batch conversion.',
+          },
+        ],
+      },
+    },
   },
 
   privacy: {

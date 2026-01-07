@@ -17,6 +17,11 @@ export const zh: Translations = {
   header: {
     heicConvert: 'HEIC 转换',
     avifConvert: 'AVIF 转换',
+    tools: '转换工具',
+    heicToJpg: 'HEIC 转 JPG',
+    heicToPng: 'HEIC 转 PNG',
+    avifToJpg: 'AVIF 转 JPG',
+    avifToPng: 'AVIF 转 PNG',
   },
 
   home: {
@@ -110,6 +115,122 @@ export const zh: Translations = {
     title: '页面未找到',
     message: '抱歉，您访问的页面不存在或已被移除。请返回首页继续使用我们的图片转换服务。',
     backHome: '返回首页',
+  },
+
+  // 转换落地页
+  converterPages: {
+    heicToJpg: {
+      title: '免费在线 HEIC 转 JPG 转换器',
+      subtitle: '将 iPhone HEIC 照片即时转换为 JPG 格式。免费、无限批量转换，保留原始质量。',
+      metaTitle: 'HEIC 转 JPG 转换器 - 免费在线工具 | 转换 iPhone 照片',
+      metaDescription: '免费在线 HEIC 转 JPG 转换器。即时将 iPhone 照片从 HEIC 转换为 JPG 格式。支持批量转换，无需注册，保留原始质量。',
+      metaKeywords: 'heic转jpg, heic转jpg转换器, heic转换jpg, heic在线转jpg, iphone照片转jpg, heic转换器',
+      faq: {
+        title: 'HEIC 转 JPG 常见问题',
+        items: [
+          {
+            question: '为什么要将 HEIC 转换为 JPG？',
+            answer: 'HEIC 是苹果从 iOS 11 开始采用的默认照片格式。虽然它压缩效果更好，但 JPG 在所有设备、操作系统和应用程序中具有通用兼容性。转换为 JPG 可确保您的照片可以在任何地方查看和分享。',
+          },
+          {
+            question: '将 HEIC 转换为 JPG 会损失质量吗？',
+            answer: '我们默认使用 92% 的质量设置，在保持合理文件大小的同时保留出色的图像质量。质量损失对肉眼几乎不可察觉。',
+          },
+          {
+            question: '一次可以转换多少个 HEIC 文件？',
+            answer: '您可以一次转换多达 100 个 HEIC 文件，每个文件最大 50MB。我们的批量转换功能可以轻松快速地转换多张照片。',
+          },
+          {
+            question: '转换过程中我的数据安全吗？',
+            answer: '是的，您的文件会被安全处理，转换后立即删除。我们从不在服务器上存储您的照片。',
+          },
+        ],
+      },
+    },
+    heicToPng: {
+      title: '免费在线 HEIC 转 PNG 转换器',
+      subtitle: '将 iPhone HEIC 照片转换为支持透明的 PNG 格式。无损质量，无限批量转换。',
+      metaTitle: 'HEIC 转 PNG 转换器 - 免费在线工具 | 无损转换',
+      metaDescription: '免费在线 HEIC 转 PNG 转换器。将 iPhone HEIC 照片转换为 PNG 格式，无损质量并支持透明。支持批量转换，无需注册。',
+      metaKeywords: 'heic转png, heic转png转换器, heic转换png, heic在线转png, iphone照片转png, heic png转换器',
+      faq: {
+        title: 'HEIC 转 PNG 常见问题',
+        items: [
+          {
+            question: '为什么选择将 HEIC 转换为 PNG 而不是 JPG？',
+            answer: 'PNG 是一种无损格式，可以保留 100% 的原始图像质量。它还支持透明度，非常适合图形、标志或需要编辑的图像。当质量比文件大小更重要时，请选择 PNG。',
+          },
+          {
+            question: 'PNG 转换真的是无损的吗？',
+            answer: '是的，PNG 使用无损压缩，意味着转换过程中不会丢失图像数据。转换后的 PNG 将与原始 HEIC 文件具有相同的质量。',
+          },
+          {
+            question: '为什么 PNG 文件比 JPG 大？',
+            answer: 'PNG 使用无损压缩，保留所有图像数据，因此文件较大。JPG 使用有损压缩，牺牲一些质量换取较小的文件大小。请根据您的需求选择。',
+          },
+          {
+            question: '带透明度的 HEIC 可以转换为 PNG 吗？',
+            answer: '是的，如果您的 HEIC 文件包含透明度信息，转换为 PNG 格式时会保留透明度。',
+          },
+        ],
+      },
+    },
+    avifToJpg: {
+      title: '免费在线 AVIF 转 JPG 转换器',
+      subtitle: '将 AVIF 图片转换为 JPG 格式以获得通用兼容性。快速、免费、无限批量转换。',
+      metaTitle: 'AVIF 转 JPG 转换器 - 免费在线工具 | 转换 AVIF 图片',
+      metaDescription: '免费在线 AVIF 转 JPG 转换器。将 AVIF 图片转换为 JPG 格式以获得通用兼容性。支持批量转换，无需注册。',
+      metaKeywords: 'avif转jpg, avif转jpg转换器, avif转换jpg, avif在线转jpg, avif转换器, avif转jpeg',
+      faq: {
+        title: 'AVIF 转 JPG 常见问题',
+        items: [
+          {
+            question: '什么是 AVIF 格式？',
+            answer: 'AVIF（AV1 图像文件格式）是基于 AV1 视频编解码器的现代图像格式。它提供比 JPG 和 WebP 更好的压缩效果，但可能不被旧版浏览器和软件支持。',
+          },
+          {
+            question: '为什么要将 AVIF 转换为 JPG？',
+            answer: '虽然 AVIF 提供出色的压缩效果，但 JPG 在几乎所有设备和软件上都有通用支持。转换为 JPG 可确保您的图片可以在任何地方查看。',
+          },
+          {
+            question: '将 AVIF 转换为 JPG 会损失质量吗？',
+            answer: '由于 JPG 使用有损压缩，可能会有一些质量损失。我们使用高质量设置（92%）来最小化任何可见差异。',
+          },
+          {
+            question: '转换速度有多快？',
+            answer: '大多数转换在几秒钟内完成。处理时间取决于文件大小和图片数量，但我们优化的转换器处理速度很快。',
+          },
+        ],
+      },
+    },
+    avifToPng: {
+      title: '免费在线 AVIF 转 PNG 转换器',
+      subtitle: '将 AVIF 图片转换为无损质量的 PNG 格式。保留透明度，无限批量转换。',
+      metaTitle: 'AVIF 转 PNG 转换器 - 免费在线工具 | 无损质量',
+      metaDescription: '免费在线 AVIF 转 PNG 转换器。将 AVIF 图片转换为 PNG 格式，无损质量并保留透明度。支持批量转换，无需注册。',
+      metaKeywords: 'avif转png, avif转png转换器, avif转换png, avif在线转png, avif转换器, avif png',
+      faq: {
+        title: 'AVIF 转 PNG 常见问题',
+        items: [
+          {
+            question: '为什么要将 AVIF 转换为 PNG？',
+            answer: 'PNG 提供无损压缩和通用兼容性。将 AVIF 转换为 PNG 可保留最大图像质量和任何透明度，非常适合编辑或存档。',
+          },
+          {
+            question: '透明度会被保留吗？',
+            answer: '是的，AVIF 和 PNG 都支持透明度（Alpha 通道）。原始 AVIF 中的任何透明度都将在 PNG 输出中保留。',
+          },
+          {
+            question: '为什么选择 PNG 而不是 JPG 进行 AVIF 转换？',
+            answer: '当您需要无损质量、透明度支持或计划进一步编辑图像时，请选择 PNG。当您需要较小的文件大小和通用兼容性时，请选择 JPG。',
+          },
+          {
+            question: '可以批量转换多个 AVIF 文件吗？',
+            answer: '是的，您可以一次转换多达 100 个 AVIF 文件。只需选择或拖动多个文件即可开始批量转换。',
+          },
+        ],
+      },
+    },
   },
 
   privacy: {

@@ -8,3 +8,5 @@ export { Header } from './Header';
 export { Footer } from './Footer';
 export { LanguageSwitcher } from './LanguageSwitcher';
 export { GoogleAnalytics, trackEvent } from './GoogleAnalytics';
+export { ConverterPage } from './ConverterPage';
+export type { ConverterPageConfig } from './ConverterPage';
