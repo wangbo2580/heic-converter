@@ -143,6 +143,14 @@ export interface Translations {
     backHome: string;
   };
 
+  // Error page
+  errorPage: {
+    title: string;
+    message: string;
+    retry: string;
+    backHome: string;
+  };
+
   // Privacy Policy
   privacy: {
     title: string;

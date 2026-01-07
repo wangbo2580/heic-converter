@@ -7,9 +7,12 @@ import { FileUploader } from './FileUploader';
 import { FilePreview } from './FilePreview';
 import { DownloadSection } from './DownloadSection';
 import { Header, Footer } from './';
+import { WebApplicationJsonLd, FAQJsonLd, BreadcrumbJsonLd, HowToJsonLd } from './JsonLd';
 import { useTranslations } from '@/contexts/LanguageContext';
 import type { FileItem, ConversionSettings, ConversionResponse, OutputFormat } from '@/types';
 import type { ConverterPageTranslations } from '@/lib/i18n/types';
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.avif-heicconverter.info';
 
 export interface ConverterPageConfig {
   // 页面翻译内容
@@ -198,8 +201,27 @@ export function ConverterPage({ pageTranslations, defaultFormat, theme }: Conver
   // 获取输出格式显示名称
   const formatDisplayName = settings.format.toUpperCase();
 
+  // Get current page path for structured data
+  const pagePath = typeof window !== 'undefined' ? window.location.pathname : '';
+
   return (
     <main className={`min-h-screen bg-gradient-to-b ${colors.gradient}`}>
+      {/* JSON-LD Structured Data */}
+      <WebApplicationJsonLd
+        name={pageTranslations.metaTitle}
+        description={pageTranslations.metaDescription}
+        url={`${SITE_URL}${pagePath}`}
+        applicationCategory="UtilitiesApplication"
+        operatingSystem="Any"
+      />
+      <FAQJsonLd questions={pageTranslations.faq.items} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: SITE_URL },
+          { name: pageTranslations.title, url: `${SITE_URL}${pagePath}` },
+        ]}
+      />
+
       <Header variant="full" theme={theme === 'purple' ? 'purple' : 'blue'} />
 
       <div className="max-w-5xl mx-auto px-4 py-10 md:py-16">

@@ -10,9 +10,16 @@ export const metadata: Metadata = {
     title: 'AVIF to PNG Converter - Free Online Tool',
     description: 'Convert AVIF images to PNG format with lossless quality. Preserves transparency.',
     type: 'website',
+    locale: 'en_US',
+    alternateLocale: ['zh_CN'],
   },
   alternates: {
     canonical: '/avif-to-png',
+    languages: {
+      'en': '/avif-to-png',
+      'zh': '/avif-to-png',
+      'x-default': '/avif-to-png',
+    },
   },
 };
 

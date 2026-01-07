@@ -10,9 +10,16 @@ export const metadata: Metadata = {
     title: 'HEIC to JPG Converter - Free Online Tool',
     description: 'Convert iPhone HEIC photos to JPG format instantly. Free, unlimited batch conversion.',
     type: 'website',
+    locale: 'en_US',
+    alternateLocale: ['zh_CN'],
   },
   alternates: {
     canonical: '/heic-to-jpg',
+    languages: {
+      'en': '/heic-to-jpg',
+      'zh': '/heic-to-jpg',
+      'x-default': '/heic-to-jpg',
+    },
   },
 };
 

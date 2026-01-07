@@ -7,10 +7,12 @@ import { FileUploader } from '@/components/FileUploader';
 import { FilePreview } from '@/components/FilePreview';
 import { ConversionSettings } from '@/components/ConversionSettings';
 import { DownloadSection } from '@/components/DownloadSection';
-import { Header, Footer } from '@/components';
+import { Header, Footer, WebApplicationJsonLd, FAQJsonLd } from '@/components';
 import { DEFAULT_SETTINGS } from '@/lib/constants';
 import { useTranslations } from '@/contexts/LanguageContext';
 import type { FileItem, ConversionSettings as Settings, ConversionResponse } from '@/types';
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.avif-heicconverter.info';
 
 export default function HomePage() {
   const t = useTranslations();
@@ -127,8 +129,26 @@ export default function HomePage() {
   const canConvert = pendingFiles.length > 0 && !isConverting;
   const isCompleted = completedFiles.length > 0 && completedFiles.length === files.length;
 
+  // FAQ questions for JSON-LD
+  const faqQuestions = [
+    { question: t.faq.heicTitle, answer: t.faq.heicAnswer },
+    { question: t.faq.avifTitle, answer: t.faq.avifAnswer },
+    { question: t.faq.qualityTitle, answer: t.faq.qualityAnswer },
+    { question: t.faq.securityTitle, answer: t.faq.securityAnswer },
+  ];
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      {/* JSON-LD Structured Data */}
+      <WebApplicationJsonLd
+        name="HEIC/AVIF Converter"
+        description={t.home.subtitle}
+        url={SITE_URL}
+        applicationCategory="UtilitiesApplication"
+        operatingSystem="Any"
+      />
+      <FAQJsonLd questions={faqQuestions} />
+
       <Header variant="full" theme="blue" />
 
       {/* Main Content */}

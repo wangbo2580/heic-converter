@@ -10,3 +10,10 @@ export { LanguageSwitcher } from './LanguageSwitcher';
 export { GoogleAnalytics, trackEvent } from './GoogleAnalytics';
 export { ConverterPage } from './ConverterPage';
 export type { ConverterPageConfig } from './ConverterPage';
+export {
+  WebApplicationJsonLd,
+  FAQJsonLd,
+  OrganizationJsonLd,
+  BreadcrumbJsonLd,
+  HowToJsonLd,
+} from './JsonLd';

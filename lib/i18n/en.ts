@@ -117,6 +117,13 @@ export const en: Translations = {
     backHome: 'Back to Home',
   },
 
+  errorPage: {
+    title: 'Something Went Wrong',
+    message: 'An unexpected error occurred. Please try again or return to the homepage.',
+    retry: 'Try Again',
+    backHome: 'Back to Home',
+  },
+
   // Converter landing pages
   converterPages: {
     heicToJpg: {

@@ -117,6 +117,13 @@ export const zh: Translations = {
     backHome: '返回首页',
   },
 
+  errorPage: {
+    title: '出错了',
+    message: '发生了意外错误。请重试或返回首页。',
+    retry: '重试',
+    backHome: '返回首页',
+  },
+
   // 转换落地页
   converterPages: {
     heicToJpg: {

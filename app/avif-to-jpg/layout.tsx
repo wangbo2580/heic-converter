@@ -10,9 +10,16 @@ export const metadata: Metadata = {
     title: 'AVIF to JPG Converter - Free Online Tool',
     description: 'Convert AVIF images to JPG format for universal compatibility. Fast and free.',
     type: 'website',
+    locale: 'en_US',
+    alternateLocale: ['zh_CN'],
   },
   alternates: {
     canonical: '/avif-to-jpg',
+    languages: {
+      'en': '/avif-to-jpg',
+      'zh': '/avif-to-jpg',
+      'x-default': '/avif-to-jpg',
+    },
   },
 };
 

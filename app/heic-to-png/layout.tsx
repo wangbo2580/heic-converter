@@ -10,9 +10,16 @@ export const metadata: Metadata = {
     title: 'HEIC to PNG Converter - Free Online Tool',
     description: 'Convert iPhone HEIC photos to PNG format with lossless quality. Supports transparency.',
     type: 'website',
+    locale: 'en_US',
+    alternateLocale: ['zh_CN'],
   },
   alternates: {
     canonical: '/heic-to-png',
+    languages: {
+      'en': '/heic-to-png',
+      'zh': '/heic-to-png',
+      'x-default': '/heic-to-png',
+    },
   },
 };
 

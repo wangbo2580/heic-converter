@@ -5,6 +5,7 @@
 import React, { useCallback, useState } from 'react';
 import { SUPPORTED_EXTENSIONS, MAX_FILE_SIZE, MAX_FILES_COUNT, generateId } from '@/lib/constants';
 import { useTranslations } from '@/contexts/LanguageContext';
+import { validateFileSignature, getFileValidationError } from '@/lib/fileValidation';
 import type { FileItem } from '@/types';
 
 interface FileUploaderProps {
@@ -16,8 +17,9 @@ export function FileUploader({ onFilesSelected, disabled }: FileUploaderProps) {
   const t = useTranslations();
   const [isDragging, setIsDragging] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [isValidating, setIsValidating] = useState(false);
 
-  const validateFiles = useCallback((fileList: FileList | File[]): FileItem[] => {
+  const validateFiles = useCallback(async (fileList: FileList | File[]): Promise<FileItem[]> => {
     const files = Array.from(fileList);
     const validFiles: FileItem[] = [];
     const errors: string[] = [];
@@ -27,17 +29,27 @@ export function FileUploader({ onFilesSelected, disabled }: FileUploaderProps) {
       return [];
     }
 
-    files.forEach((file) => {
+    setIsValidating(true);
+
+    for (const file of files) {
       const ext = '.' + file.name.split('.').pop()?.toLowerCase();
 
       if (!SUPPORTED_EXTENSIONS.includes(ext)) {
         errors.push(`${file.name}: Unsupported format`);
-        return;
+        continue;
       }
 
       if (file.size > MAX_FILE_SIZE) {
         errors.push(`${file.name}: File exceeds 50MB`);
-        return;
+        continue;
+      }
+
+      // Validate file signature (magic number)
+      const signatureResult = await validateFileSignature(file);
+      if (!signatureResult.valid) {
+        const extWithoutDot = ext.slice(1);
+        errors.push(getFileValidationError(file.name, extWithoutDot, signatureResult.detectedType));
+        continue;
       }
 
       validFiles.push({
@@ -47,7 +59,9 @@ export function FileUploader({ onFilesSelected, disabled }: FileUploaderProps) {
         status: 'pending',
         progress: 0,
       });
-    });
+    }
+
+    setIsValidating(false);
 
     if (errors.length > 0) {
       setError(errors.join('\n'));
@@ -58,9 +72,9 @@ export function FileUploader({ onFilesSelected, disabled }: FileUploaderProps) {
     return validFiles;
   }, []);
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
-      const validFiles = validateFiles(e.target.files);
+      const validFiles = await validateFiles(e.target.files);
       if (validFiles.length > 0) {
         onFilesSelected(validFiles);
       }
@@ -82,7 +96,7 @@ export function FileUploader({ onFilesSelected, disabled }: FileUploaderProps) {
     setIsDragging(false);
   }, []);
 
-  const handleDrop = useCallback((e: React.DragEvent) => {
+  const handleDrop = useCallback(async (e: React.DragEvent) => {
     e.preventDefault();
     e.stopPropagation();
     setIsDragging(false);
@@ -91,7 +105,7 @@ export function FileUploader({ onFilesSelected, disabled }: FileUploaderProps) {
 
     const files = e.dataTransfer.files;
     if (files && files.length > 0) {
-      const validFiles = validateFiles(files);
+      const validFiles = await validateFiles(files);
       if (validFiles.length > 0) {
         onFilesSelected(validFiles);
       }
