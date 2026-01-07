@@ -7,3 +7,4 @@ export { DownloadSection } from './DownloadSection';
 export { Header } from './Header';
 export { Footer } from './Footer';
 export { LanguageSwitcher } from './LanguageSwitcher';
+export { GoogleAnalytics, trackEvent } from './GoogleAnalytics';
