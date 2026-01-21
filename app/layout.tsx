@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import { GoogleAnalytics } from '@/components';
+import { OrganizationJsonLd } from '@/components/JsonLd';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -66,6 +67,10 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <GoogleAnalytics />
+        <OrganizationJsonLd
+          name="HEIC/AVIF Converter"
+          url={siteUrl}
+        />
         <LanguageProvider>
           {children}
         </LanguageProvider>

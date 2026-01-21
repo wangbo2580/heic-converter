@@ -3,14 +3,19 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'iPhone Photo Converter - Convert HEIC to JPG/PNG Online Free',
-  description: 'Free iPhone photo converter online. Convert HEIC photos from iPhone to JPG or PNG instantly. Works on Windows & Mac, no software download needed. Batch convert up to 100 photos.',
-  keywords: 'iphone photo converter, convert iphone photos, iphone heic to jpg, iphone photo to jpg, iphone pictures converter, convert iphone photos to jpg online, iphone image converter, ios photo converter',
+  title: 'iPhone Photo Converter - Open HEIC on Windows/Mac | 100% Free',
+  description: 'Can\'t open iPhone photos on Windows? Convert HEIC to JPG/PNG instantly - 100% FREE, no signup, no software install. Works on any device. Batch up to 100 photos. Privacy-first: files stay in your browser.',
+  keywords: 'iphone photo converter, convert iphone photos windows, iphone heic to jpg, open iphone photos on pc, iphone photo to jpg free, iphone pictures converter, convert iphone photos to jpg online free, iphone image converter no signup, ios photo converter',
   openGraph: {
-    title: 'iPhone Photo Converter - HEIC to JPG/PNG Free Online',
-    description: 'Free iPhone photo converter. Convert HEIC to JPG/PNG instantly. No software needed, works in browser.',
+    title: 'iPhone Photo Converter - Open HEIC on Any Device',
+    description: 'Can\'t open iPhone photos? Convert HEIC to JPG/PNG free. No software needed, works on Windows, Mac, Android.',
     type: 'website',
     locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'iPhone Photo Converter - Free, No Software Needed',
+    description: 'Convert iPhone HEIC photos to JPG/PNG. Works on Windows, Mac, Android. Free, instant.',
   },
   alternates: {
     canonical: '/iphone-photo-converter',

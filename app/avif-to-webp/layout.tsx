@@ -3,15 +3,20 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AVIF to WebP Converter Free Online - Modern Format Conversion',
-  description: 'Free AVIF to WebP converter online. Convert AVIF images to WebP for better browser compatibility and smaller file sizes. Batch conversion up to 100 files, preserve quality. No signup required.',
-  keywords: 'avif to webp, avif to webp converter, convert avif to webp, avif to webp online free, avif webp converter, batch avif to webp, avif converter',
+  title: 'AVIF to WebP Converter - 100% Free, Wide Compatibility | No Signup',
+  description: 'Convert AVIF to WebP for broader browser support - 100% FREE, no signup, no watermarks. Better compatibility than AVIF. Batch up to 100 files. Privacy-first: all processing in your browser.',
+  keywords: 'avif to webp, avif to webp converter free, convert avif to webp, avif to webp online free, avif webp compatibility, batch avif to webp, avif to webp no signup, avif converter free',
   openGraph: {
-    title: 'AVIF to WebP Converter Free Online - Modern Format',
-    description: 'Free AVIF to WebP converter. Convert AVIF images to WebP for wider compatibility. Batch process up to 100 images.',
+    title: 'AVIF to WebP - Free Converter, Wide Compatibility',
+    description: 'Convert AVIF to WebP for better browser support. 100% free, batch 100 files, no registration. Your files never leave your device.',
     type: 'website',
     locale: 'en_US',
     alternateLocale: ['zh_CN'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AVIF to WebP - Free, Compatible, No Signup',
+    description: 'Convert AVIF to WebP for wider support. Batch 100 files, no watermarks, privacy-first.',
   },
   alternates: {
     canonical: '/avif-to-webp',

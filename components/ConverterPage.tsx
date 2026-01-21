@@ -221,6 +221,15 @@ export function ConverterPage({ pageTranslations, defaultFormat, theme }: Conver
           { name: pageTranslations.title, url: `${SITE_URL}${pagePath}` },
         ]}
       />
+      <HowToJsonLd
+        name={`How to ${pageTranslations.title}`}
+        description={pageTranslations.metaDescription}
+        steps={[
+          { name: 'Upload Your Images', text: 'Drag and drop your images or click to browse. You can upload up to 100 files at once for batch conversion.' },
+          { name: 'Start Conversion', text: `Click the Convert button to start processing. All conversion happens in your browser for maximum privacy.` },
+          { name: 'Download Results', text: 'Download converted images individually or as a ZIP file. Original quality and EXIF metadata are preserved.' },
+        ]}
+      />
 
       <Header variant="full" theme={theme === 'purple' ? 'purple' : 'blue'} />
 

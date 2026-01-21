@@ -8,9 +8,12 @@ import { FilePreview } from '@/components/FilePreview';
 import { ConversionSettings } from '@/components/ConversionSettings';
 import { DownloadSection } from '@/components/DownloadSection';
 import { Header, Footer } from '@/components';
+import { WebApplicationJsonLd, FAQJsonLd, BreadcrumbJsonLd, HowToJsonLd } from '@/components/JsonLd';
 import { DEFAULT_SETTINGS } from '@/lib/constants';
 import { useTranslations } from '@/contexts/LanguageContext';
 import type { FileItem, ConversionSettings as Settings, ConversionResponse } from '@/types';
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.avif-heicconverter.info';
 
 export default function AvifPage() {
   const t = useTranslations();
@@ -124,6 +127,50 @@ export default function AvifPage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
+      {/* JSON-LD Structured Data */}
+      <WebApplicationJsonLd
+        name="Free AVIF Converter - Convert to JPG/PNG/WebP"
+        description="Convert AVIF images to JPG, PNG, or WebP format. 100% free, batch conversion up to 100 files, no signup required."
+        url={`${SITE_URL}/avif`}
+        applicationCategory="UtilitiesApplication"
+        operatingSystem="Any"
+      />
+      <FAQJsonLd
+        questions={[
+          {
+            question: 'What is AVIF format?',
+            answer: 'AVIF (AV1 Image File Format) is a modern image format that offers superior compression and quality compared to JPEG and PNG. It is based on the AV1 video codec and provides up to 50% better compression than JPEG.',
+          },
+          {
+            question: 'Why convert AVIF to JPG or PNG?',
+            answer: 'While AVIF offers excellent compression, not all software and platforms support it yet. Converting to JPG or PNG ensures your images can be viewed on any device or uploaded to any website.',
+          },
+          {
+            question: 'Is this AVIF converter really free?',
+            answer: 'Yes, our AVIF converter is 100% free with no hidden costs. You can convert unlimited files without registration or watermarks.',
+          },
+          {
+            question: 'Is my data safe when converting AVIF files?',
+            answer: 'Absolutely. All image processing happens directly in your browser. Your files are never uploaded to our servers, ensuring complete privacy and security.',
+          },
+        ]}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Home', url: SITE_URL },
+          { name: 'AVIF Converter', url: `${SITE_URL}/avif` },
+        ]}
+      />
+      <HowToJsonLd
+        name="How to Convert AVIF Images"
+        description="Convert AVIF images to JPG, PNG, or WebP format in 3 easy steps"
+        steps={[
+          { name: 'Upload AVIF Files', text: 'Drag and drop your AVIF images or click to browse. You can upload up to 100 files at once.' },
+          { name: 'Choose Output Format', text: 'Select your desired output format: JPG for universal compatibility, PNG for lossless quality, or WebP for modern browsers.' },
+          { name: 'Download Converted Images', text: 'Click Convert and download your images individually or as a ZIP file.' },
+        ]}
+      />
+
       <Header variant="full" theme="purple" />
 
       {/* Main Content */}
