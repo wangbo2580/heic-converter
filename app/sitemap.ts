@@ -55,6 +55,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+    // Long-tail keyword landing pages
+    {
+      url: `${baseUrl}/batch-heic-to-jpg`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/iphone-photo-converter`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
     // Legal pages
     {
       url: `${baseUrl}/privacy`,
